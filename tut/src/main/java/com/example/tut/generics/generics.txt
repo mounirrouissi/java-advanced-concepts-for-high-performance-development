@@ -1,0 +1,28 @@
+* type variance
+
+In Java, the reason why a List<X> is not considered a subtype of List<Y>, even if X is a subtype of Y, is due to Java’s generics type system which is designed to ensure type safety.
+
+The principle at play here is called type variance, and in Java, generics are invariant. This means that even if X is a subtype of Y, List<X> and List<Y> are considered distinct types and are not directly assignable to one another. This design choice is to prevent runtime errors that could occur from inserting an incompatible type into a list that is expected to contain only one type of element.
+
+For example, consider the following scenario:
+
+List<Object> objects = new ArrayList<Object>();
+List<String> strings = new ArrayList<String>();
+
+objects = strings; // This is not allowed in Java.
+objects.add(new Integer(10)); // This would be problematic if it were allowed.
+
+
+Solution:
+
+If Java allowed List<String> to be a subtype of List<Object>, you could insert an Integer into a list that is supposed to only contain Strings, leading to a ClassCastException when you try to retrieve it as a String.
+
+To allow some flexibility, Java provides wildcards with upper bounded (? extends Y) and lower bounded (? super X) type parameters which enable you to write code that can work with lists of different types in a type-safe manner.
+
+For instance, you can use List<? extends Y> to indicate a list of some unknown subtype of Y, which allows read operations but restricts write operations to ensure type safety:
+
+List<? extends Number> numbers = new ArrayList<Integer>();
+
+
+*
+
