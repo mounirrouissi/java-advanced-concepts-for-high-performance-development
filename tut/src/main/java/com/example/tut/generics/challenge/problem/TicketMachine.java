@@ -1,4 +1,4 @@
-package com.example.tut.generics.challenge.problem;
+package _02_06;
 
 import java.util.ArrayList;
 import java.util.List;

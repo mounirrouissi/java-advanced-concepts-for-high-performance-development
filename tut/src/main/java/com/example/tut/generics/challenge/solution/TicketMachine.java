@@ -19,8 +19,8 @@ public class TicketMachine {
                 asList(new ChildTicket(), new ChildTicket())
         );
 
-        // List<String> destinations = flattenList(destinationLists);
-        // System.out.println(destinations);
+        List<String> destinations = flattenList(destinationLists);
+        System.out.println(destinations);
 
        List<Ticket> tickets = flattenList(ticketLists);
        System.out.println(tickets);
@@ -34,9 +34,9 @@ public class TicketMachine {
 
 
     //This should work with lists containing any type of object
-    static List<Ticket> flattenList(List<List<Ticket>> nestedList) {
+    static <T> List<T> flattenList(List<List<T>> nestedList) {
 
-        List<Ticket> flattenedList = new ArrayList<>();
+        List<T> flattenedList = new ArrayList<>();
         nestedList.forEach(flattenedList::addAll);
         return flattenedList;
 

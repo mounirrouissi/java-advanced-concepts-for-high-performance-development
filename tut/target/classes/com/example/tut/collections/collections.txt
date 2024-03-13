@@ -1,0 +1,33 @@
+# ArrayList vs LinkedList
+
+## ArrayList
+- **Internal Structure**: Dynamic array
+- **Access**: Fast random access (`O(1)` for `get`)
+- **Adding/Removing**: Slower due to potential shifting (`O(n)`)
+- **Memory Efficiency**: Better memory locality
+- **Use When**: More get operations, stable list size
+
+## LinkedList
+- **Internal Structure**: Doubly-linked list
+- **Access**: Slower random access (`O(n)`)
+- **Adding/Removing**: Fast insertions/removals at ends (`O(1)`)
+- **Memory Efficiency**: Additional overhead per element
+- **Use When**: Frequent insertions/deletions, especially at ends
+
+
+
+# HashMap vs ArrayList
+
+## HashMap
+- **Structure**: Hash table
+- **Access**: Fast access by key (`O(1)`)
+- **Elements**: Key-value pairs
+- **Ordering**: No order maintained
+- **Use When**: Associating keys with values, fast lookups
+
+## ArrayList
+- **Structure**: Dynamic array
+- **Access**: Fast random access (`O(1)` for `get`)
+- **Elements**: Individual values
+- **Ordering**: Insertion order preserved
+- **Use When**: Ordered collection, frequent access by index
