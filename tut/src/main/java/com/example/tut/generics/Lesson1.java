@@ -1,4 +1,4 @@
-package com.example.tut;
+package com.example.tut.generics;
 
 import java.util.List;
 import java.util.Map;
