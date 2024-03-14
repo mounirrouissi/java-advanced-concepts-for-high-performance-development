@@ -1,0 +1,46 @@
+# Functional Programming in Java
+
+## Introduction
+- Overview of Functional Programming
+- Benefits of Functional Programming in Java
+
+## Section 1: Understanding Functional Programming
+- What is Functional Programming?
+- Key Concepts:
+  - Immutability
+  - Pure Functions
+  - Higher-order Functions
+- Lambda Calculus and its Influence
+
+## Section 2: Java's Functional Interfaces
+- `Function<T,R>`
+- `Predicate<T>`
+- `Consumer<T>`
+- `Supplier<T>`
+
+## Section 3: Lambda Expressions
+- Syntax and Usage
+- Examples of Lambda Expressions
+- Functional Interfaces and Lambda Expressions
+
+## Section 4: Streams API
+- Introduction to Streams
+- Stream Operations:
+  - Filtering
+  - Mapping
+  - Reducing
+- Collectors and Collecting Data
+
+## Section 5: Optional Class
+- Avoiding `null` with `Optional`
+- Creating and Using `Optional` Objects
+- `Optional` Methods: `ifPresent`, `orElse`, `map`
+
+## Section 6: Advanced Topics
+- Parallel Streams
+- Combining Functional Programming with OOP
+- Best Practices and Patterns
+
+## Conclusion
+- Recap of Functional Programming in Java
+- Further Resources and Learning Path

@@ -31,3 +31,18 @@
 - **Elements**: Individual values
 - **Ordering**: Insertion order preserved
 - **Use When**: Ordered collection, frequent access by index
+
+
+# HashMap vs LinkedHashMap
+
+## HashMap
+- **Ordering**: No
+- **Performance**: Fast (O(1) for basic operations)
+- **Structure**: Hash table
+- **Use When**: Order is not important
+
+## LinkedHashMap
+- **Ordering**: Yes (insertion-order or access-order)
+- **Performance**: Slightly slower than HashMap
+- **Structure**: Hash table + linked list
+- **Use When**: Order is important
