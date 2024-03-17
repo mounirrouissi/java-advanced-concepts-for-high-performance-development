@@ -1,0 +1,34 @@
+** we can create threads by either extending Thread class or implemnting Runnable Interface
+
+Here is a tutorial explaining concurrency in Java using ExecutorService:
+
+Concurrency in Java refers to the ability to run multiple threads in parallel to make optimal use of CPU resources. The java.util.concurrent package provides useful classes for concurrent programming such as ExecutorService. 
+
+The ExecutorService is used to manage a pool of threads and assign tasks to them. It provides methods to submit Runnable or Callable tasks for execution and shut down the service.
+
+To create an ExecutorService, we can use one of the factory methods provided in Executors class:
+
+ExecutorService executor = Executors.newSingleThreadExecutor(); //creates a single threaded executor
+ExecutorService executor = Executors.newFixedThreadPool(10); //creates a thread pool with 10 threads
+
+To submit a task, we can use:
+
+executor.submit(runnableTask); 
+
+This will assign the runnableTask to one of the threads managed by the executor. 
+
+We can also submit Callable tasks that return a value:
+
+Future<String> future = executor.submit(callableTask);
+//get the result with future.get()
+
+Some key methods provided by ExecutorService:
+
+- shutdown() - initiates an orderly shutdown. Previously submitted tasks are executed but no new tasks accepted.
+
+- awaitTermination(long timeout, TimeUnit unit) - blocks until all tasks complete after a shutdown request, or timeout occurs.
+
+- shutdownNow() - attempts to stop all executing tasks and halts immediately. 
+
+Using ExecutorService allows us to abstract thread management from the business logic. We can focus on designing the tasks and submit them to the executor rather than creating threads manually. The framework handles pooling threads, assigning tasks, handling exceptions etc. This makes concurrent code easier to write and maintain.
+
